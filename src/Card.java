@@ -1,11 +1,11 @@
-public class Chance {
+public class Card {
 
   String message = "";
   int payment;
   int moveTo;
   int dontMove = 0;
 
-  public Chance(int payment, String message, int moveTo){
+  public Card(int payment, String message, int moveTo){
     setMessage(message);
     setPayment(payment);
     setMoveTo(moveTo);
@@ -28,12 +28,14 @@ public class Chance {
   }
 
   public void setMoveTo(int moveTo){
-    if((moveTo > 40) || (moveTo < 0))
-      System.out.println("Invalid Space");
-    else if(moveTo == 40)
-      this.moveTo = -1;
+    if((moveTo > 41) || (moveTo < 0))
+      System.out.println("Stay where you are.");
     else
       this.moveTo = moveTo;
+  }
+
+  public int getMoveTo(){
+    return this.moveTo;
   }
 
   public String toString(){

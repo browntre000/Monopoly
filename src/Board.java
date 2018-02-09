@@ -17,6 +17,10 @@ public class Board{
     return board.length;
   }
 
+  public String getBoardName(int i){
+    return boardName.toString(i);
+  }
+
 
 
   public String toString(){

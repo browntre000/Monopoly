@@ -10,13 +10,30 @@ public class Players {
   public Players(){
     Scanner read = new Scanner(System.in);
     System.out.println("Welcome to Monopoly");
-    System.out.println("How many players are playing?");
-    int amountOfPlayers = read.nextInt();
+    int amountOfPlayers = 10;
+
+    while(amountOfPlayers <= 1 || amountOfPlayers > 8) {
+      System.out.println("How many players are playing?");
+      amountOfPlayers = read.nextInt();
+      if (amountOfPlayers > 8) {
+        System.out.println("Too many players");
+        System.out.println();
+      }
+      if(amountOfPlayers < 2){
+        System.out.println("Too little players");
+        System.out.println();
+      }
+
+    }
 
     for(int i = 0; i < amountOfPlayers; i++) {
-      player = new Player(i);
+      player = new Player(i + 1);
       players.add(player);
     }
+  }
+
+  public void deletePlayer(int i){
+    players.remove(i);
   }
 
   public Player getPlayer(int i){

@@ -3,11 +3,12 @@ public class Player {
   //Row 1 - Player Position
   //Row 2 - player bank
   //Row 3 - player Name
+  //Row 4 - jail Status
   int[] playerData = new int[4];
 
   public Player(int i){
     playerData[0] = 0;
-    playerData[1] = 0;
+    playerData[1] = 2500;
     playerData[2] = setPlayerName(i);
     playerData[3] = 0;
   }
@@ -15,16 +16,24 @@ public class Player {
   public void setPlayerPosition(int random1, int random2){
     playerData[0] += (random1 + random2);
 
-    System.out.println("You rolled a " + random1 + random2);
+    System.out.println("You rolled a " + (random1 + random2));
 
     if(playerData[0] >= 40){
       playerData[0] -= 40;
     }
 
-    System.out.println("You landed on " + playerData[0]);
   }
 
-  public void setJailStatus(){
+
+  public void setPlayerPosition(int space){
+    playerData[0] = space;
+  }
+
+  public void goToJail(){
+    playerData[0] = 10;
+  }
+
+  public void toggleJailStatus(){
     if(playerData[3] == 1){
       playerData[3] = 0;
     }
@@ -37,7 +46,7 @@ public class Player {
     return i + 1;
   }
 
-  public void setBank(int money){
+  public void changeBank(int money){
     playerData[1] += money;
   }
 

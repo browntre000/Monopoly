@@ -5,18 +5,18 @@ public class BoardName {
   public BoardName(){
     boardName[20] = "Free Parking";
     boardName[0] = "Go";
-    boardName[2] = "Commuity Chest";
-    boardName[17] = "Community Chest";
-    boardName[33] = "Community Chest";
-    boardName[7] = "Chance";
-    boardName[22] = "Chance";
-    boardName[36] = "Chance";
+    boardName[2] = "Commuity Chest 1";
+    boardName[17] = "Community Chest 2";
+    boardName[33] = "Community Chest 3";
+    boardName[7] = "Chance 1";
+    boardName[22] = "Chance 2";
+    boardName[36] = "Chance 3";
     boardName[10] = "Jail";
     boardName[30] = "Go to Jail";
     boardName[4] = "Income Tax";
     boardName[38] = "Luxury Tax";
     boardName[5] = "Reading Railroad";
-    boardName[15] = "Pennsylavania Railroad";
+    boardName[15] = "Pennsylvania Railroad";
     boardName[25] = "B. & O. Railroad";
     boardName[35] = "Short Line";
     boardName[12] = "Electric Company";
